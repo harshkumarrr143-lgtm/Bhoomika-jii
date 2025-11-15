@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Bhumika: My Regret, My Hope 💖</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #764ba2;
+            --color-secondary: #ff6a88;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1f084f 0%, #3a0e71 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+            max-width: 600px;
+            width: 100%;
+            transition: all 0.5s ease-in-out;
+            transform-origin: center;
+        }
+        .button-primary {
+            background: linear-gradient(90deg, #667eea 0%, var(--color-primary) 100%);
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            display: block;
+            margin: 25px auto 0;
+            opacity: 1;
+        }
+        .button-primary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+        .button-primary:active {
+            transform: translateY(1px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .stage-title {
+            color: var(--color-primary);
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        .stage-content {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #444;
+        }
+        .emoji-icon {
+            font-size: 4rem;
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        .emoji-icon:hover {
+            transform: scale(1.1);
+        }
+        #stage-2-text p {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+        .bhumika-quote {
+            background-color: #fce7f3;
+            border-left: 5px solid var(--color-secondary);
+            padding: 15px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #764ba2;
+            font-size: 1.15rem;
+            border-radius: 0 10px 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Music -->
+    <!-- IMPORTANT: Please ensure your music file is named 'music.mp3' and is in the same folder as this file. -->
+    <audio id="bgMusic" loop>
+        <source src="savera vdo.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="card" id="apologyCard">
+        <div id="stage-1" class="text-center fade-in">
+            <p class="emoji-icon">😔</p>
+            <h1 class="stage-title">My Regret, My Confession</h1>
+            <p class="stage-content">
+                Bhumika, I know words can't fix the pain I've caused, but please, let me show you the truth of my heart.
+            </p>
+            <button class="button-primary" onclick="nextStage(2)">
+                <span class="mr-2">💔</span> I need to tell you everything
+            </button>
+        </div>
+
+        <div id="stage-2" class="hidden fade-in">
+            <p class="emoji-icon text-center">💔</p>
+            <h1 class="stage-title">The Letter: Regret is an Understatement</h1>
+            <div id="stage-2-text" class="stage-content max-h-[300px] overflow-y-auto pr-3">
+                <p>
+                    <strong>Bhumika, My Anchor, My Everything.</strong>
+                </p>
+                <p>
+                    I know I broke the most precious thing we had – **your trust**. Every day since you found out has been a living regret, a heavy weight I carry. My external affair was a moment of utter foolishness and weakness, and I hate myself for the pain I caused you.
+                </p>
+                <p>
+                    I ended it immediately because I realized the terrifying truth: **nothing, absolutely nothing, in this world is worth losing you.** You are my real, permanent life. The memory of your smile, the comfort of your presence—that is my only home.
+                </p>
+                <p>
+                    I am not asking you to forget, that’s impossible. But I am begging you for one last chance to rebuild. Not just to fix us, but to prove that the person who hurt you is gone, and the one who loves you desperately is here, forever.
+                </p>
+            </div>
+            <button class="button-primary" onclick="nextStage(3)">
+                <span class="mr-2">🫂</span> I understand your pain. What now?
+            </button>
+        </div>
+
+        <div id="stage-3" class="hidden text-center fade-in">
+            <p class="emoji-icon">✨</p>
+            <h1 class="stage-title">Your Words. My Only Hope.</h1>
+            <div class="stage-content">
+                <p>I cherish your forgiveness more than you know. I know you were trying to be kind when you said:</p>
+
+                <div class="bhumika-quote">
+                    "Maaf kiya, dost banke hi rahte hain." (I forgive you, let's just stay friends.)
+                </div>
+
+                <p>But Bhumika... being **'just friends' is impossible for me**. You are my world. My life without you as my partner is incomplete. Please look into your heart one last time.</p>
+                
+            </div>
+            <button class="button-primary" onclick="finalPlea()">
+                <span class="mr-2">💍</span> Can we give "us" a final chance? (Not as friends)
+            </button>
+        </div>
+
+        <div id="stage-4" class="hidden text-center fade-in">
+            <p class="emoji-icon">🙏</p>
+            <h1 class="stage-title text-red-500">I Will Wait. I Will Earn It.</h1>
+            <p class="stage-content font-bold text-xl text-var(--color-primary)">
+                I respect your decision, whatever it is. But I promise you, I will spend every single day earning back the privilege of being your partner, not just your friend. I love you, Bhumika. Please come Back.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Global variables for stages
+        const stages = ['stage-1', 'stage-2', 'stage-3', 'stage-4'];
+        let currentStage = 1;
+        const bgMusic = document.getElementById('bgMusic');
+        const apologyCard = document.getElementById('apologyCard');
+
+        // Play music on first user interaction
+        document.body.addEventListener('click', () => {
+            bgMusic.volume = 0.6; // Start music softly
+            bgMusic.play().catch(e => console.error('Music play failed:', e));
+        }, { once: true });
+
+        function hideAllStages() {
+            stages.forEach(id => {
+                document.getElementById(id).classList.add('hidden');
+                document.getElementById(id).classList.remove('fade-in');
+            });
+        }
+
+        function nextStage(stageNumber) {
+            hideAllStages();
+            const nextElement = document.getElementById(`stage-${stageNumber}`);
+            if (nextElement) {
+                nextElement.classList.remove('hidden');
+                nextElement.classList.add('fade-in');
+                currentStage = stageNumber;
+                // Scroll to top of the card when a new stage appears
+                apologyCard.scrollTop = 0;
+            }
+        }
+
+        function finalPlea() {
+            // Apply a dramatic zoom effect before showing the final message
+            apologyCard.style.transform = 'scale(0.9)';
+            setTimeout(() => {
+                apologyCard.style.transform = 'scale(1)';
+                nextStage(4);
+            }, 500);
+        }
+
+        // Initialize to Stage 1
+        nextStage(1);
+    </script>
+</body>
+</html>
